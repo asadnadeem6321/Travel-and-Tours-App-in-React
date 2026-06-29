@@ -54,11 +54,18 @@
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 1.25rem 0 0;
+  padding: 1rem 0;
+  margin-top: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(5, 11, 18, 0.68);
+  backdrop-filter: blur(18px);
 }
 
 .header__brand {
@@ -68,6 +75,19 @@
   color: var(--text);
   font-weight: 700;
   letter-spacing: 0.02em;
+}
+
+.header__brand strong,
+.header__brand small {
+  display: block;
+}
+
+.header__brand small {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 .header__mark {
@@ -86,6 +106,39 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
+}
+
+.header__toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.header__toggle span {
+  width: 1.25rem;
+  height: 2px;
+  margin: 0 auto;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .header__nav a,
@@ -425,7 +478,6 @@
 }
 
 @media (max-width: 960px) {
-  .header,
   .hero,
   .section--split {
     grid-template-columns: 1fr;
@@ -476,6 +528,32 @@
   .footer__links {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .header {
+    position: sticky;
+    padding-inline: 0.1rem;
+  }
+
+  .header__toggle {
+    display: inline-flex;
+  }
+
+  .header__cta {
+    display: none;
+  }
+
+  .header__nav {
+    display: none;
+    padding: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.25rem;
+    background: rgba(11, 23, 39, 0.96);
+  }
+
+  .header__nav--open {
+    display: flex;
+    flex-direction: column;
   }
 }
 .counter {
