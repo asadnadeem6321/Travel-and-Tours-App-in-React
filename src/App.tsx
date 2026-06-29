@@ -16,10 +16,10 @@ function App() {
         <section className="hero">
           <div className="hero__content">
             <span className="eyebrow">Travel planning, simplified</span>
-            <h1>Discover weekend escapes, guided tours, and custom travel plans.</h1>
+            <h1>Plan better weekend escapes with one clean travel experience.</h1>
             <p className="hero__text">
               Build memorable trips with handpicked stays, curated experiences,
-              and flexible bookings designed for mobile and desktop travelers.
+              and flexible bookings designed for travelers on mobile and desktop.
             </p>
 
             <div className="hero__actions">
@@ -29,6 +29,21 @@ function App() {
               <a className="button button--secondary" href="#contact">
                 Plan a trip
               </a>
+            </div>
+
+            <div className="hero__highlights" aria-label="Hero highlights">
+              <div>
+                <span>Fast booking</span>
+                <strong>Pick, compare, and reserve in minutes</strong>
+              </div>
+              <div>
+                <span>Curated routes</span>
+                <strong>Mountain escapes, city breaks, and family tours</strong>
+              </div>
+              <div>
+                <span>Trusted support</span>
+                <strong>Planning help before and during the trip</strong>
+              </div>
             </div>
 
             <div className="hero__stats" aria-label="Travel highlights">
@@ -47,26 +62,48 @@ function App() {
             </div>
           </div>
 
-          <aside className="hero__panel" aria-label="Trip search summary">
-            <div className="search-card">
-              <p className="search-card__label">Find your next escape</p>
-              <div className="search-card__fields">
-                <div>
-                  <span>Destination</span>
-                  <strong>Hunza Valley</strong>
+          <aside className="hero__panel" aria-label="Trip inspiration summary">
+            <div className="hero__visual">
+              <div className="hero__scene">
+                <span className="hero__scene-tag">Featured this week</span>
+                <div className="hero__route">
+                  <div>
+                    <span>Departure</span>
+                    <strong>Lahore</strong>
+                  </div>
+                  <div className="hero__route-line" aria-hidden="true" />
+                  <div>
+                    <span>Arrival</span>
+                    <strong>Hunza Valley</strong>
+                  </div>
                 </div>
-                <div>
-                  <span>Travel dates</span>
-                  <strong>Fri - Sun</strong>
-                </div>
-                <div>
-                  <span>Travelers</span>
-                  <strong>2 adults</strong>
+                <div className="hero__scene-card">
+                  <p>Mountain weekend escape</p>
+                  <strong>4 days, 3 nights</strong>
+                  <span>Private transport, local guide, boutique stay</span>
                 </div>
               </div>
-              <button type="button" className="button button--primary button--full">
-                Search trips
-              </button>
+
+              <div className="search-card">
+                <p className="search-card__label">Find your next escape</p>
+                <div className="search-card__fields">
+                  <div>
+                    <span>Destination</span>
+                    <strong>Hunza Valley</strong>
+                  </div>
+                  <div>
+                    <span>Travel dates</span>
+                    <strong>Fri - Sun</strong>
+                  </div>
+                  <div>
+                    <span>Travelers</span>
+                    <strong>2 adults</strong>
+                  </div>
+                </div>
+                <button type="button" className="button button--primary button--full">
+                  Search trips
+                </button>
+              </div>
             </div>
           </aside>
         </section>
