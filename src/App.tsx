@@ -1,4 +1,7 @@
 import './App.css'
+import babuSarPass from './assets/babu sar pass.jpg'
+import mountains from './assets/mountains.jpg'
+import { ContactForm } from './components/ContactForm'
 import { Footer } from './components/Footer'
 import { FeatureCard } from './components/FeatureCard'
 import { Header } from './components/Header'
@@ -66,6 +69,11 @@ function App() {
             <div className="hero__visual">
               <div className="hero__scene">
                 <span className="hero__scene-tag">Featured this week</span>
+                <img
+                  src={babuSarPass}
+                  alt="Babu Sar Pass mountain landscape featured destination"
+                  className="hero__scene-image"
+                />
                 <div className="hero__route">
                   <div>
                     <span>Departure</span>
@@ -86,6 +94,11 @@ function App() {
 
               <div className="search-card">
                 <p className="search-card__label">Find your next escape</p>
+                <img
+                  src={mountains}
+                  alt="Mountain landscape background"
+                  className="search-card__image"
+                />
                 <div className="search-card__fields">
                   <div>
                     <span>Destination</span>
@@ -151,6 +164,11 @@ function App() {
             ))}
           </div>
         </section>
+
+        <ContactForm
+          title="Plan your next escape"
+          description="Share your travel dreams and we'll create a personalized itinerary for you."
+        />
       </main>
 
       <Footer
